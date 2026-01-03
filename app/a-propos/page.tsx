@@ -57,42 +57,42 @@ const values = [
     icon: LightBulbIcon,
     title: 'Innovation Continue',
     description: 'Nous adoptons les dernières technologies et méthodes pour des solutions avant-gardistes.',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'bg-sky-950',
     delay: 0.1,
   },
   {
     icon: UsersIcon,
     title: 'Orientation Client',
     description: 'Votre succès guide chacune de nos décisions. Nous écoutons, comprenons et délivrons.',
-    color: 'from-purple-500 to-pink-500',
+    color: 'bg-sky-950',
     delay: 0.2,
   },
   {
     icon: ShieldCheckIcon,
     title: 'Intégrité & Transparence',
     description: 'Communication claire, processus transparents et éthique professionnelle irréprochable.',
-    color: 'from-emerald-500 to-green-500',
+    color: 'bg-sky-950',
     delay: 0.3,
   },
   {
     icon: RocketLaunchIcon,
     title: 'Excellence Opérationnelle',
     description: "Nous visons l'excellence dans chaque détail, de la conception à la livraison.",
-    color: 'from-orange-500 to-red-500',
+    color: 'bg-sky-950',
     delay: 0.4,
   },
   {
     icon: HeartIcon,
     title: 'Passion Digitale',
     description: "Nous aimons ce que nous faisons, et cela se ressent dans la qualité de notre travail.",
-    color: 'from-rose-500 to-pink-500',
+    color: 'bg-sky-950',
     delay: 0.5,
   },
   {
     icon: ChatBubbleLeftRightIcon,
     title: 'Collaboration Active',
     description: 'Nous travaillons main dans la main avec vous à chaque étape du projet.',
-    color: 'from-violet-500 to-purple-500',
+    color: 'bg-sky-950',
     delay: 0.6,
   },
 ];
@@ -142,16 +142,16 @@ export default function APropos() {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative h-screen flex items-center justify-center overflow-hidden px-6 md:px-12"
+        className="relative h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 bg-sky-950"
       >
         {/* Background with Parallax */}
-        <motion.div 
+        {/* <motion.div 
           style={{ y, opacity }}
-          className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900"
-        />
+          className="absolute inset-0"
+        /> */}
         
         {/* Floating Elements */}
-        <motion.div 
+        {/* <motion.div 
           animate={{ 
             x: [0, 100, 0],
             y: [0, -50, 0],
@@ -162,9 +162,9 @@ export default function APropos() {
             duration: 20
           }}
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
-        />
+        /> */}
         
-        <motion.div 
+        {/* <motion.div 
           animate={{ 
             x: [0, -100, 0],
             y: [0, 50, 0]
@@ -175,9 +175,9 @@ export default function APropos() {
             delay: 0.5
           }}
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
-        />
+        /> */}
 
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
+        <div className=" max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: -60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -190,7 +190,7 @@ export default function APropos() {
             </span>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-300 to-white bg-clip-text text-transparent">
+              <span className="bg-white bg-clip-text text-transparent">
                 Notre Histoire
               </span>
             </h1>
@@ -233,7 +233,7 @@ export default function APropos() {
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 shadow-lg">
+                    <div className="p-4 rounded-2xl bg-sky-950 shadow-lg">
                       <RocketLaunchIcon className="h-10 w-10 text-white" />
                     </div>
                     <h2 className="text-4xl font-bold text-gray-900">
@@ -243,25 +243,25 @@ export default function APropos() {
                   
                   <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
                     <p>
-                      Chez <span className="font-bold text-blue-700">Digital Switch CM</span>, 
+                      Chez <span className="font-bold text-blue-950">Digital Switch CM</span>, 
                       nous nous engageons à démocratiser l&apos;accès aux solutions digitales de qualité 
                       pour les entreprises africaines.
                     </p>
                     
                     <p>
                       Notre mission est de fournir des services de développement web, applications mobiles, 
-                      design graphique et maintenance qui allient <span className="font-semibold text-cyan-600">innovation</span>, 
-                      <span className="font-semibold text-blue-600"> accessibilité</span> et 
-                      <span className="font-semibold text-emerald-600"> impact durable</span>.
+                      design graphique et maintenance qui allient <span className="font-semibold text-sky-950">innovation</span>, 
+                      <span className="font-semibold text-sky-950"> accessibilité</span> et 
+                      <span className="font-semibold text-sky-950"> impact durable</span>.
                     </p>
                     
                     <div className="pt-6 border-t border-gray-100">
                       <div className="flex items-center gap-4 text-sm text-gray-600">
-                        <ClockIcon className="h-5 w-5 text-blue-500" />
+                        <ClockIcon className="h-5 w-5 text-sky-950" />
                         <span>Livraison dans les délais</span>
                       </div>
                       <div className="flex items-center gap-4 text-sm text-gray-600 mt-2">
-                        <TrophyIcon className="h-5 w-5 text-amber-500" />
+                        <TrophyIcon className="h-5 w-5 text-sky-950" />
                         <span>Qualité certifiée</span>
                       </div>
                     </div>
@@ -278,13 +278,13 @@ export default function APropos() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative h-full bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden">
+              <div className="relative h-full bg-sky-950 rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid-white.svg')] opacity-5" />
                 <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-2xl -translate-x-16 -translate-y-16" />
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg">
+                    <div className="p-4 rounded-2xl bg-emerald-500 shadow-lg">
                       <EyeIcon className="h-10 w-10 text-white" />
                     </div>
                     <h2 className="text-4xl font-bold text-white">
@@ -333,7 +333,7 @@ export default function APropos() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Notre Parcours
               </span>
             </h2>
@@ -344,7 +344,7 @@ export default function APropos() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 via-cyan-500 to-purple-500" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-sky-950" />
             
             <div className="space-y-24">
               {milestones.map((milestone, index) => (
@@ -357,12 +357,12 @@ export default function APropos() {
                   className={`relative flex items-center ${index % 2 === 0 ? 'justify-end pr-12 md:pr-24' : 'justify-start pl-12 md:pl-24'}`}
                 >
                   <div className={`absolute top-1/2 transform -translate-y-1/2 ${index % 2 === 0 ? 'right-0 translate-x-1/2' : 'left-0 -translate-x-1/2'}`}>
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 shadow-lg border-4 border-white" />
+                    <div className="w-6 h-6 rounded-full bg-sky-950 shadow-lg border-4 border-white" />
                   </div>
                   
                   <div className={`max-w-md ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                     <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                      <div className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent mb-2">
+                      <div className="text-3xl font-bold bg-sky-950 bg-clip-text text-transparent mb-2">
                         {milestone.year}
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
@@ -391,7 +391,7 @@ export default function APropos() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Nos Valeurs Fondamentales
               </span>
             </h2>
@@ -443,7 +443,7 @@ export default function APropos() {
                   />
 
                   <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                    <div className={`flex justify-center mb-6 p-4 rounded-2xl bg-gradient-to-br ${value.color ?? ''} w-fit mx-auto`}>
+                    <div className={`flex justify-center mb-6 p-4 rounded-2xl ${value.color ?? ''} w-fit mx-auto`}>
                       <value.icon className="h-10 w-10 text-white" />
                     </div>
 
@@ -453,9 +453,9 @@ export default function APropos() {
 
                     <p className="text-gray-600 text-center leading-relaxed">{value.description}</p>
 
-                    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <ArrowRightIcon className="h-6 w-6 text-blue-600" />
-                    </div>
+                    </div> */}
                   </div>
                 </motion.div>
               );
@@ -475,7 +475,7 @@ export default function APropos() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Rencontrez Notre Équipe
               </span>
             </h2>
@@ -514,7 +514,7 @@ export default function APropos() {
               >
                 <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group-hover:-translate-y-2">
                   <div className="flex flex-col items-center text-center">
-                    <div className={`relative mb-6 p-1 rounded-full bg-gradient-to-br ${member.color ?? ''}`}>
+                    <div className={`relative mb-6 p-1 rounded-full bg-sky-950`}>
                       <div className="w-24 h-24 rounded-full bg-gradient-to-br from-gray-100 to-white flex items-center justify-center">
                         <span className="text-2xl font-bold bg-gradient-to-br bg-clip-text text-transparent"
                           style={{ background: avatarGradient }}>
@@ -531,7 +531,7 @@ export default function APropos() {
                       {member.name}
                     </h3>
 
-                    <p className="text-blue-600 font-semibold mb-3">
+                    <p className="text-emerald-600 font-semibold mb-3">
                       {member.role}
                     </p>
                     
@@ -568,7 +568,7 @@ export default function APropos() {
             
             <Link 
               href="/equipe" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-4 bg-sky-950 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               Découvrir toute l&apos;équipe
               <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
@@ -579,7 +579,7 @@ export default function APropos() {
 
       {/* CTA Section */}
       <section className="py-32 px-6 md:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900" />
+        <div className="absolute inset-0 bg-sky-950" />
         <div className="absolute inset-0 bg-[url('/grid-white.svg')] opacity-10" />
         
         <motion.div 
@@ -615,7 +615,7 @@ export default function APropos() {
                 href="/contact"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
+                className="group relative px-12 py-6 bg-emerald-600 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                 <span className="relative flex items-center justify-center">

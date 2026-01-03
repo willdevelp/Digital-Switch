@@ -24,7 +24,7 @@ const contactMethods = [
     icon: PhoneIcon,
     title: "Téléphone",
     details: ["+237 696 49 20 29", "+237 695 46 12 04"],
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-sky-950",
     description: "Appelez-nous pour une consultation rapide",
     action: "Appeler maintenant",
     link: "tel:+237696492029",
@@ -33,7 +33,7 @@ const contactMethods = [
     icon: EnvelopeIcon,
     title: "Email",
     details: ["info@digitalswitch.cm", "contact@digitalswitch.cm"],
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-sky-950",
     description: "Réponse sous 24h maximum",
     action: "Envoyer un email",
     link: "mailto:info@digitalswitch.cm",
@@ -51,7 +51,7 @@ const contactMethods = [
     icon: ClockIcon,
     title: "Horaires",
     details: ["Lun - Ven: 8h - 18h", "Samedi: 9h - 13h"],
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-sky-950",
     description: "Support disponible 6j/7",
     action: "Prendre rendez-vous",
     link: "/rendez-vous",
@@ -128,7 +128,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative pt-20 pb-16 px-6 md:px-12 overflow-hidden bg-blue-900"
+        className="relative pt-20 pb-16 px-6 md:px-12 overflow-hidden bg-sky-950"
       >
         {/* Background with Parallax */}
         {/* <motion.div 
@@ -177,7 +177,7 @@ export default function Contact() {
             </span>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-300 to-white bg-clip-text text-transparent">
+              <span className="bg-white bg-clip-text text-transparent">
                 Contactez-Nous
               </span>
             </h1>
@@ -280,7 +280,7 @@ export default function Contact() {
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 shadow-lg">
+                    <div className="p-4 rounded-2xl bg-sky-950 shadow-lg">
                       <ChatBubbleLeftRightIcon className="h-10 w-10 text-white" />
                     </div>
                     <h2 className="text-4xl font-bold text-gray-900">
@@ -323,7 +323,7 @@ export default function Contact() {
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
                           <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-                            <UserIcon className="h-4 w-4 text-blue-500" />
+                            <UserIcon className="h-4 w-4 text-sky-950" />
                             Nom complet *
                           </label>
                           <input
@@ -339,7 +339,7 @@ export default function Contact() {
                         
                         <div>
                           <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-                            <EnvelopeIcon className="h-4 w-4 text-blue-500" />
+                            <EnvelopeIcon className="h-4 w-4 text-sky-950" />
                             Email *
                           </label>
                           <input
@@ -357,7 +357,7 @@ export default function Contact() {
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
                           <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-                            <PhoneIcon className="h-4 w-4 text-blue-500" />
+                            <PhoneIcon className="h-4 w-4 text-sky-950" />
                             Téléphone
                           </label>
                           <input
@@ -372,7 +372,7 @@ export default function Contact() {
                         
                         <div>
                           <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-                            <BuildingOfficeIcon className="h-4 w-4 text-blue-500" />
+                            <BuildingOfficeIcon className="h-4 w-4 text-sky-950" />
                             Service intéressé
                           </label>
                           <select
@@ -395,7 +395,7 @@ export default function Contact() {
                       
                       <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
-                          <ChatBubbleLeftRightIcon className="h-4 w-4 text-blue-500" />
+                          <ChatBubbleLeftRightIcon className="h-4 w-4text-sky-950" />
                           Votre message *
                         </label>
                         <textarea
@@ -414,7 +414,7 @@ export default function Contact() {
                         disabled={isSubmitting}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="group relative w-full py-5 bg-gradient-to-r from-blue-700 to-cyan-600 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
+                        className="group relative w-full py-5 bg-sky-950 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                         <span className="relative flex items-center justify-center gap-3">
@@ -449,13 +449,13 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl p-10 text-white relative overflow-hidden"
+                className="bg-sky-950 rounded-3xl p-10 text-white relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[url('/grid-white.svg')] opacity-5" />
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg">
+                    <div className="p-4 rounded-2xl bg-emerald-500 shadow-lg">
                       <ShieldCheckIcon className="h-10 w-10" />
                     </div>
                     <h2 className="text-3xl font-bold">Pourquoi Nous Contacter ?</h2>
@@ -517,8 +517,8 @@ export default function Contact() {
                   {faqs.map((faq, index) => (
                     <div key={index} className="border-b border-gray-100 pb-6 last:border-0">
                       <h3 className="font-bold text-lg text-gray-900 mb-3 flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-blue-100">
-                          <QuestionMarkCircleIcon className="h-5 w-5 text-blue-600" />
+                        <div className="p-2 rounded-lg">
+                          <QuestionMarkCircleIcon className="h-5 w-5 text-sky-950" />
                         </div>
                         {faq.question}
                       </h3>
@@ -549,7 +549,7 @@ export default function Contact() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Notre Localisation
               </span>
             </h2>
@@ -600,7 +600,7 @@ export default function Contact() {
                 </div> */}
                 
                 <div className="flex items-start gap-4">
-                  <ClockIcon className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                  <ClockIcon className="h-6 w-6 text-sky-950 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Horaires de bureau</h4>
                     <p className="text-gray-600">Lundi - Vendredi: 8h - 18h</p>
@@ -609,7 +609,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <BuildingOfficeIcon className="h-6 w-6 text-purple-600 mt-1 flex-shrink-0" />
+                  <BuildingOfficeIcon className="h-6 w-6 text-sky-950 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Visite sur rendez-vous</h4>
                     <p className="text-gray-600">Contactez-nous pour planifier une visite</p>
@@ -622,7 +622,7 @@ export default function Contact() {
                   href="/rendez-vous"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center justify-center w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="inline-flex items-center justify-center w-full py-4 bg-sky-950 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <span className="flex items-center gap-3">
                     Prendre rendez-vous

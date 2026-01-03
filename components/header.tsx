@@ -67,13 +67,13 @@ export default function Header() {
                     href={item.href}
                     className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                       pathname === item.href
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+                        ? "text-sky-950 bg-blue-50"
+                        : "text-gray-700 hover:text-sky-950 hover:bg-gray-100"
                     }`}
                   >
                     <span>{item.label}</span>
                     {pathname === item.href && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></span>
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-sky-950 rounded-full"></span>
                     )}
                   </Link>
                 </li>
