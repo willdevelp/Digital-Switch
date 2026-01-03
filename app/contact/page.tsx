@@ -33,25 +33,25 @@ const contactMethods = [
     icon: EnvelopeIcon,
     title: "Email",
     details: ["info@digitalswitch.cm", "contact@digitalswitch.cm"],
-    color: "from-purple-500 to-pink-500",
+    color: "from-blue-500 to-cyan-500",
     description: "Réponse sous 24h maximum",
     action: "Envoyer un email",
     link: "mailto:info@digitalswitch.cm",
   },
-  {
-    icon: MapPinIcon,
-    title: "Adresse",
-    details: ["Douala, Cameroun", "Zone industrielle"],
-    color: "from-emerald-500 to-green-500",
-    description: "Bureau disponible sur rendez-vous",
-    action: "Voir sur la carte",
-    link: "https://maps.google.com",
-  },
+  // {
+  //   icon: MapPinIcon,
+  //   title: "Adresse",
+  //   details: ["Douala, Cameroun", "Zone industrielle"],
+  //   color: "from-emerald-500 to-green-500",
+  //   description: "Bureau disponible sur rendez-vous",
+  //   action: "Voir sur la carte",
+  //   link: "https://maps.google.com",
+  // },
   {
     icon: ClockIcon,
     title: "Horaires",
     details: ["Lun - Ven: 8h - 18h", "Samedi: 9h - 13h"],
-    color: "from-orange-500 to-amber-500",
+    color: "from-blue-500 to-cyan-500",
     description: "Support disponible 6j/7",
     action: "Prendre rendez-vous",
     link: "/rendez-vous",
@@ -128,13 +128,13 @@ export default function Contact() {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative pt-32 pb-24 px-6 md:px-12 overflow-hidden"
+        className="relative pt-20 pb-16 px-6 md:px-12 overflow-hidden bg-blue-900"
       >
         {/* Background with Parallax */}
-        <motion.div 
+        {/* <motion.div 
           style={{ y, opacity }}
-          className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900"
-        />
+          className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900"
+        /> */}
         
         {/* Floating Elements */}
         <motion.div 
@@ -147,7 +147,7 @@ export default function Contact() {
             duration: 20,
             ease: "linear" 
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue- rounded-full blur-3xl"
         />
         
         <motion.div 
@@ -590,14 +590,14 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Informations pratiques</h3>
               
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <MapPinIcon className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Adresse complète</h4>
                     <p className="text-gray-600">Zone Industrielle, Douala</p>
                     <p className="text-gray-600">Cameroun</p>
                   </div>
-                </div>
+                </div> */}
                 
                 <div className="flex items-start gap-4">
                   <ClockIcon className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
@@ -612,7 +612,7 @@ export default function Contact() {
                   <BuildingOfficeIcon className="h-6 w-6 text-purple-600 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Visite sur rendez-vous</h4>
-                    <p className="text-gray-600">Contactez-nous pour planifier une visite de notre bureau</p>
+                    <p className="text-gray-600">Contactez-nous pour planifier une visite</p>
                   </div>
                 </div>
               </div>

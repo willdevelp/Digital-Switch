@@ -185,7 +185,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         
         {/* Floating Elements */}
-        <motion.div 
+        <motion.div   
           animate={{ y: [0, -20, 0] }}
           transition={{ repeat: Infinity, duration: 3 }}
           className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
