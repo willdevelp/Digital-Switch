@@ -21,96 +21,36 @@ import {
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon as SolidStarIcon } from "@heroicons/react/24/solid";
+import { desc } from "framer-motion/client";
 
 const services = [
   {
-    id: "web",
-    title: "Site vitrine",
-    price: "75 000 FCFA",
-    icon: GlobeAltIcon,
-    color: "from-blue-500 to-cyan-500",
-    features: [
-      "5 pages maximum",
-      "Design responsive & moderne",
-      "Formulaire de contact avancé",
-      "Interface d'administration intuitive",
-      "Optimisation SEO basique",
-      "Hébergement 1 an inclus",
-    ],
-    popular: true,
-    delivery: "7-10 jours",
-    support: "3 mois inclus",
-  },
-  {
     id: "pro",
-    title: "Site professionnel",
-    price: "150 000 FCFA",
+    title: "Creation de Sites Web",
     icon: CodeBracketIcon,
-    color: "from-purple-500 to-pink-500",
+    color: "",
+    description: "Boostez votre entreprise à travers un Site Vitrine dynamiques, Site E-Commerce robuste, une application Web adaptés à tout type d'écran, sécurisé et optimisé. Avec des interfaces intuitives, une structure SEO-friendly et des fonctionnalités sur mesure pour garantir fiabilité, rapidité et évolutivité. ",
     features: [
-      "10 pages maximum",
-      "Backend d'administration complet",
-      "Galerie photos/vidéos",
-      "Blog intégré",
-      "Référencement SEO avancé",
-      "Analytics & tracking",
-      "Maintenance 6 mois",
+      "Site Vitrine(site pour la présentation d'une entreprise)",
+      "Site E-Commerce",
+      "Application Web",
+      "Application Mobile",
     ],
     popular: false,
     delivery: "15-20 jours",
     support: "6 mois inclus",
   },
   {
-    id: "ecommerce",
-    title: "Site e-commerce",
-    price: "300 000 FCFA",
-    icon: ShoppingCartIcon,
-    color: "from-emerald-500 to-green-500",
-    features: [
-      "Catalogue produits illimité",
-      "Paiement en ligne sécurisé",
-      "Gestion des stocks",
-      "Gestion des commandes",
-      "Rapports analytiques",
-      "Mobile-first design",
-      "Formation utilisateur",
-    ],
-    popular: true,
-    delivery: "25-30 jours",
-    support: "12 mois inclus",
-  },
-  {
-    id: "mobile",
-    title: "Applications mobiles",
-    price: "200 000 FCFA",
-    icon: DevicePhoneMobileIcon,
-    color: "from-orange-500 to-red-500",
-    features: [
-      "Design UI/UX sur mesure",
-      "Performance optimisée",
-      "Publication stores inclus",
-      "Notifications push",
-      "Backend API",
-      "Maintenance 6 mois",
-      "Mises à jour gratuites",
-    ],
-    popular: false,
-    delivery: "30-45 jours",
-    support: "6 mois inclus",
-  },
-  {
     id: "design",
-    title: "Design graphique",
-    price: "25 000 FCFA",
+    title: "Conception graphique",
     icon: PaintBrushIcon,
-    color: "from-violet-500 to-purple-500",
+    color: "",
+    description: "Obtenez une identité visuelle forte avec nos services de conception graphique. Nous créons des logos uniques, des chartes graphiques cohérentes et des supports marketing percutants qui reflètent l'essence de votre marque et captivent votre audience.",
     features: [
-      "Logo professionnel unique",
-      "Charte graphique complète",
-      "5 révisions incluses",
-      "Fichiers sources vectoriels",
-      "Guide d'utilisation",
-      "Support personnalisé",
+      "Logo professionnel",
+      "Flyers et brochures",
+      "Cartes de visites",
+      "Bannières pour réseaux sociaux",
     ],
     popular: false,
     delivery: "5-7 jours",
@@ -119,98 +59,35 @@ const services = [
   {
     id: "marketing",
     title: "Marketing digital",
-    price: "50 000 FCFA",
     icon: MegaphoneIcon,
-    color: "from-amber-500 to-yellow-500",
+    color: "",
+    description: "Augmentez votre visibilité en ligne et attirez plus de clients avec nos services de marketing digital. Nous élaborons des stratégies personnalisées incluant SEO, campagnes publicitaires, gestion des réseaux sociaux et email marketing pour maximiser votre retour sur investissement.",
     features: [
       "Stratégie digitale complète",
-      "Analyse de concurrence",
-      "Plan multicanal (SEO/SEA)",
-      "Création de contenu",
-      "Reporting mensuel",
-      "Optimisation continue",
-      "ROI mesurable",
+      "Campagnes publicitaires ciblées",
+      "Gestion des réseaux sociaux",
+      "Analyse et reporting",
     ],
     popular: true,
     delivery: "10-15 jours",
     support: "3 mois inclus",
   },
   {
-    id: "seo",
-    title: "Référencement (SEO)",
-    price: "40 000 FCFA",
+    id: "conception",
+    title: "Conception de Logiciel de Gestion",
     icon: ChartBarIcon,
-    color: "from-cyan-500 to-blue-500",
+    color: "",
+    description:"Concevez des logiciels de gestion sur mesure pour optimiser vos processus internes. Nous développons des solutions personnalisées qui automatisent vos tâches récurrentes, centralisent vos données et améliorent la productivité de votre équipe.",
     features: [
-      "Audit SEO complet",
-      "Optimisation on-page",
-      "Optimisation technique",
-      "Stratégie de contenu",
-      "Suivi positionnement",
-      "Reporting mensuel",
-      "Conseils d'expert",
+      "Logiciel de gestion sur mesure",
+      "Automatisation des processus",
+      "Centralisation des données",
+      "Interface intuitive",
     ],
     popular: false,
     delivery: "7-14 jours",
     support: "3 mois inclus",
-  },
-  {
-    id: "community",
-    title: "Community Management",
-    price: "60 000 FCFA / mois",
-    icon: UserGroupIcon,
-    color: "from-pink-500 to-rose-500",
-    features: [
-      "Plan de contenu mensuel",
-      "Animation quotidienne",
-      "Création de visuels",
-      "Modération & engagement",
-      "Analyse de performance",
-      "Croissance communauté",
-      "Rapports détaillés",
-    ],
-    popular: false,
-    delivery: "Immédiat",
-    support: "Continuel",
-  },
-  {
-    id: "email",
-    title: "Email Marketing",
-    price: "20 000 FCFA",
-    icon: EnvelopeIcon,
-    color: "from-indigo-500 to-blue-500",
-    features: [
-      "Segmentation avancée",
-      "Templates responsives",
-      "Automatisations",
-      "A/B testing",
-      "Analytics détaillées",
-      "Optimisation taux d'ouverture",
-      "Support technique",
-    ],
-    popular: false,
-    delivery: "5-10 jours",
-    support: "2 mois inclus",
-  },
-  {
-    id: "maintenance",
-    title: "Maintenance Premium",
-    price: "30 000 FCFA / mois",
-    icon: ShieldCheckIcon,
-    color: "from-slate-600 to-gray-500",
-    features: [
-      "Mises à jour permanentes",
-      "Support 24/7",
-      "Sauvegardes quotidiennes",
-      "Sécurité renforcée",
-      "Monitoring continu",
-      "Optimisations",
-      "Rapports mensuels",
-    ],
-    popular: true,
-    delivery: "Immédiat",
-    support: "Illimité",
-  },
+  }
 ];
 
 const benefits = [
@@ -265,12 +142,12 @@ export default function Services() {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative pt-32 pb-24 px-6 md:px-12 overflow-hidden"
+        className="relative pt-16 pb-24 px-6 md:px-12 bg-sky-950 overflow-hidden"
       >
         {/* Background with Parallax */}
         <motion.div 
           style={{ y, opacity }}
-          className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900"
+          className="absolute inset-0"
         />
         
         {/* Floating Elements */}
@@ -300,7 +177,7 @@ export default function Services() {
             </span>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-300 to-white bg-clip-text text-transparent">
+              <span className="bg-white bg-clip-text text-transparent">
                 Nos Services
               </span>
             </h1>
@@ -314,7 +191,7 @@ export default function Services() {
           </motion.div>
 
           {/* Categories Filter */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -333,7 +210,7 @@ export default function Services() {
                 {category.label}
               </button>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           {/* Stats Bar */}
           <motion.div
@@ -388,8 +265,8 @@ export default function Services() {
                   className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 group-hover:from-blue-200 group-hover:to-cyan-200 transition-all duration-300 mb-6">
-                      <benefit.icon className="h-12 w-12 text-blue-600" />
+                    <div className="p-4 rounded-2xl bg-sky-950 transition-all duration-300 mb-6">
+                      <benefit.icon className="h-12 w-12 text-white" />
                     </div>
                     
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -420,7 +297,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2"
           >
             {filteredServices.map((service, index) => {
               const gradientBR = (() => {
@@ -477,47 +354,49 @@ export default function Services() {
                 className="group relative"
               >
                 {/* Badge Popular */}
-                {service.popular && (
+                {/* {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                     <div className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-sm rounded-full shadow-lg flex items-center gap-2">
                       <SolidStarIcon className="h-4 w-4" />
                       POPULAIRE
                     </div>
                   </div>
-                )}
+                )} */}
 
                 {/* Card */}
                 <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden">
                   {/* Background Effect */}
-                  <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color ?? ''} opacity-5 rounded-full blur-2xl -translate-y-16 translate-x-16`} />
+                  <div className={`absolute top-0 right-0 w-32 h-32 bg-sky-950 opacity-5 rounded-full blur-2xl -translate-y-16 translate-x-16`} />
                   
-                  {/* Icon */}
-                  <div className="relative z-10 flex justify-center mb-6">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-br ${service.color ?? ''} shadow-lg`}>
-                      <service.icon className="h-10 w-10 text-white" />
+                  <div className="flex items-center space-x-8">
+                    {/* Icon */}
+                    <div className="relative z-10 flex justify-center mb-6">
+                      <div className={`p-4 rounded-2xl bg-sky-950 shadow-lg`}>
+                        <service.icon className="h-10 w-10 text-white" />
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                    {service.title}
-                  </h3>
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
+                      {service.title}
+                    </h3>
+                  </div>
 
                   {/* Price */}
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold bg-gradient-to-br bg-clip-text text-transparent"
+                    {/* <div className="text-4xl font-bold bg-gradient-to-br bg-clip-text text-transparent"
                       style={{ background: gradientBR }}>
                       {service.price}
-                    </div>
-                    {service.id === "maintenance" || service.id === "community" ? (
+                    </div> */}
+                    {/* {service.id === "maintenance" || service.id === "community" ? (
                       <p className="text-sm text-gray-500 mt-1">Abonnement mensuel</p>
                     ) : (
                       <p className="text-sm text-gray-500 mt-1">Forfait unique</p>
-                    )}
+                    )} */}
                   </div>
 
                   {/* Details */}
-                  <div className="flex justify-center gap-6 mb-8 text-sm">
+                  {/* <div className="flex justify-center gap-6 mb-8 text-sm">
                     <div className="flex items-center gap-2 text-gray-600">
                       <ClockIcon className="h-4 w-4 text-blue-500" />
                       <span>{service.delivery}</span>
@@ -526,40 +405,43 @@ export default function Services() {
                       <ShieldCheckIcon className="h-4 w-4 text-green-500" />
                       <span>{service.support}</span>
                     </div>
-                  </div>
+                  </div> */}
+
+                  {/* Description */}
+                  <h1 className="text-gray-700 mb-6">{service.description}</h1>
 
                   {/* Features */}
                   <ul className="space-y-3 mb-8">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <div className="flex-shrink-0 mt-1">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-br ${service.color ?? ''}`} />
+                        <div className="flex-shrink-0 mt-2">
+                          <div className={`w-2 h-2 rounded-full bg-sky-950`} />
                         </div>
-                        <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
+                        <span className="text-gray-700 text-md leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* CTA Button */}
-                  <div className="relative">
+                  {/* <div className="relative">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="w-full py-4 rounded-xl font-semibold transition-all duration-300 overflow-hidden group/btn"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"
+                      <div className="absolute inset-0 bg-white transition-opacity duration-300"
                         style={{ background: gradientRight }} />
-                      <div className={`absolute inset-0 bg-gradient-to-br ${service.color ?? ''} opacity-10`} />
-                      <span className="relative flex items-center justify-center gap-3 text-gray-900 group-hover/btn:text-white transition-colors duration-300">
+                      <div className={`absolute inset-0 bg-sky-950 rounded-lg`} />
+                      <span className="relative flex items-center justify-center gap-3 text-white group-hover/btn:text-white transition-colors duration-300">
                         Choisir ce service
                         <ArrowRightIcon className="h-5 w-5 group-hover/btn:translate-x-2 transition-transform" />
                       </span>
                     </motion.button>
-                  </div>
+                  </div> */}
 
                   {/* Hover Border */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-3xl"
-                    style={{ background: gradientRight }} />
+                  {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-3xl"
+                    style={{ background: gradientRight }} /> */}
                 </div>
               </motion.div>
             );
@@ -574,13 +456,13 @@ export default function Services() {
             viewport={{ once: true }}
             className="mt-24"
           >
-            <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl p-12 text-center relative overflow-hidden">
+            <div className="bg-sky-950 rounded-3xl p-12 text-center relative overflow-hidden">
               {/* Background Pattern */}
-              <div className="absolute inset-0 bg-[url('/grid-white.svg')] opacity-5" />
+              <div className="absolute inset-0 opacity-5" />
               
               {/* Floating Elements */}
-              <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl -translate-x-32 -translate-y-32" />
-              <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl translate-x-32 translate-y-32" />
+              <div className="absolute top-0 left-0 w-64 h-64  rounded-full blur-3xl -translate-x-32 -translate-y-32" />
+              <div className="absolute bottom-0 right-0 w-64 h-64  rounded-full blur-3xl translate-x-32 translate-y-32" />
 
               <div className="relative z-10">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -597,9 +479,9 @@ export default function Services() {
                     href="/contact"
                     whileHover={{ scale: 1.05, y: -5 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
+                    className="group relative px-10 py-5 bg-emerald-500 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                    {/* <div className="absolute inset-0 bg-teal-300 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" /> */}
                     <span className="relative flex items-center justify-center gap-3">
                       Demander un devis personnalisé
                       <ArrowRightIcon className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
@@ -636,7 +518,7 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Questions Fréquentes
               </span>
             </h2>
@@ -677,8 +559,8 @@ export default function Services() {
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-100">
-                    <QuestionMarkCircleIcon className="h-5 w-5 text-blue-600" />
+                  <div className="p-2 rounded-lg bg-sky-100">
+                    <QuestionMarkCircleIcon className="h-5 w-5 text-sky-950" />
                   </div>
                   {faq.question}
                 </h3>
