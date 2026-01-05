@@ -122,16 +122,16 @@ export default function DevenirPartenaire() {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative pt-32 pb-24 px-6 md:px-12 overflow-hidden"
+        className="relative pt-16 pb-24 px-6 md:px-12 overflow-hidden bg-sky-950"
       >
         {/* Background with Parallax */}
         <motion.div 
           style={{ y, opacity }}
-          className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900"
+          className="absolute inset-0"
         />
         
         {/* Floating Elements */}
-        <motion.div 
+        {/* <motion.div 
           animate={{ 
             x: [0, 100, 0],
             rotate: [0, 180, 360]
@@ -142,9 +142,9 @@ export default function DevenirPartenaire() {
             ease: "linear" 
           }}
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
-        />
+        /> */}
         
-        <motion.div 
+        {/* <motion.div 
           animate={{ 
             x: [0, -100, 0],
             y: [0, 50, 0]
@@ -156,7 +156,7 @@ export default function DevenirPartenaire() {
             delay: 0.5
           }}
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
-        />
+        /> */}
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <motion.div
@@ -170,14 +170,13 @@ export default function DevenirPartenaire() {
               Programme Partenaire Premium
             </span>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
-              <span className="bg-gradient-to-r from-cyan-400 via-emerald-300 to-white bg-clip-text text-transparent">
-                Devenez Partenaire
+            <h1 className="text-4xl md:text-7xl font-bold mb-8 tracking-tight">
+              <span className="bg-white bg-clip-text text-transparent">
+                Transformez votre réseau en revenus
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              Transformez votre réseau en revenus pérennes
               <span className="block text-cyan-300 font-semibold mt-2">
                 20% de commission • Support premium • Récompenses exclusives
               </span>
@@ -218,9 +217,9 @@ export default function DevenirPartenaire() {
               href="#inscription"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative px-10 py-5 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all duration-300 overflow-hidden"
+              className="group relative px-10 py-5 bg-emerald-600 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all duration-300 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-emerald-600 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
               <span className="relative flex items-center justify-center gap-3">
                 Rejoindre le programme
                 <ArrowRightIcon className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
@@ -240,10 +239,11 @@ export default function DevenirPartenaire() {
       </section>
 
       {/* Benefits Grid */}
-      <section id="details" className="py-20 px-6 md:px-12 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-white to-emerald-50/50" />
+      <section id="details" className="py-20 px-6 md:px-12 relative ">
+        <div className="absolute inset-0" />
         
-        <div className="relative max-w-7xl mx-auto">
+        <div className='space-y-24'>
+          <div className="relative max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -252,7 +252,7 @@ export default function DevenirPartenaire() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-emerald-700 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Votre Package Partenaire
               </span>
             </h2>
@@ -288,16 +288,16 @@ export default function DevenirPartenaire() {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl blur-xl"
+                <div className="absolute inset-0 bg-sky-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl blur-xl"
                   style={{ background: bgGradient }}
                 />
 
                 <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden">
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${benefit.color ?? ''}`}>
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-sky-950/90`}>
                     {benefit.highlight}
                   </div>
 
-                  <div className={`flex justify-center mb-6 p-4 rounded-2xl bg-gradient-to-br ${benefit.color ?? ''} w-fit mx-auto`}>
+                  <div className={`flex justify-center mb-6 p-4 rounded-2xl bg-sky-950 w-fit mx-auto`}>
                     <benefit.icon className="h-10 w-10 text-white" />
                   </div>
 
@@ -314,181 +314,62 @@ export default function DevenirPartenaire() {
             })}
           </div>
         </div>
-      </section>
 
-      {/* Commission Calculator */}
-      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-emerald-600 bg-clip-text text-transparent">
-                Simulez Vos Gains
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              Voyez combien vous pouvez gagner avec notre programme
-            </p>
-          </motion.div>
+        {/* Detailed Cards */}
+            <div className="grid gap-8 md:grid-cols-3 mb-16 relative max-w-7xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="col-span-1 bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white/30 shadow-lg"
+                >
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4">Programme de Code Promo</h2>
+                    <p className="text-slate-600 mb-6">Recevez un code unique et suivez en temps réel les ventes générées. Tableaux de bord clairs, export facile et rapports par période.</p>
+                    <ul className="text-slate-700 space-y-3">
+                        <li className="flex items-start gap-3"><span className="text-blue-900 mt-1">•</span> Suivi des conversions</li>
+                        <li className="flex items-start gap-3"><span className="text-blue-900 mt-1">•</span> Paiements transparents</li>
+                        <li className="flex items-start gap-3"><span className="text-blue-900 mt-1">•</span> Support prioritaire</li>
+                    </ul>
+                </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Calculator */}
-            <motion.div
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl p-10 shadow-2xl border border-gray-100"
-            >
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-4 rounded-2xl bg-gradient-to-br from-emerald-500 to-cyan-500 shadow-lg">
-                  <CreditCardIcon className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-gray-900">Calculateur de Gains</h3>
-              </div>
-              
-              <div className="space-y-8">
-                <div>
-                  <label className="block text-lg font-semibold text-gray-700 mb-4">
-                    Nombre de clients par mois
-                  </label>
-                  <div className="flex items-center gap-4">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-500 bg-clip-text text-transparent">
-                      3
-                    </div>
-                    <div className="flex-1">
-                      <input
-                        type="range"
-                        min="1"
-                        max="20"
-                        defaultValue="3"
-                        className="w-full h-3 bg-gradient-to-r from-emerald-100 to-cyan-100 rounded-full appearance-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-emerald-500 [&::-webkit-slider-thumb]:to-cyan-500 [&::-webkit-slider-thumb]:shadow-lg"
-                      />
-                      <div className="flex justify-between text-sm text-gray-500 mt-2">
-                        <span>1</span>
-                        <span>5</span>
-                        <span>10</span>
-                        <span>15</span>
-                        <span>20</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-lg font-semibold text-gray-700 mb-4">
-                    Valeur moyenne par vente
-                  </label>
-                  <div className="grid grid-cols-3 gap-4">
-                    {['75K FCFA', '150K FCFA', '300K FCFA'].map((amount, index) => (
-                      <button
-                        key={index}
-                        className={`py-4 rounded-xl font-semibold transition-all duration-300 ${
-                          index === 1 
-                            ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg' 
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                        }`}
-                      >
-                        {amount}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Result */}
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50 to-cyan-50 border border-emerald-100">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="text-gray-600">Gains mensuels estimés</p>
-                      <p className="text-4xl font-bold bg-gradient-to-r from-emerald-700 to-cyan-600 bg-clip-text text-transparent">
-                        90,000 FCFA
-                      </p>
-                    </div>
-                    <div className="p-4 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500">
-                      <TrophyIcon className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-500 mt-4">
-                    Basé sur 3 clients à 150K FCFA avec 20% de commission
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
+                    className="col-span-1 bg-blue-900 text-white rounded-3xl p-8 shadow-2xl"
+                >
+                    <h2 className="text-2xl font-bold mb-4">Commissions</h2>
+                    <p className="text-white/90 mb-6">20% sur chaque vente réalisée via votre code. Exemple : 30,000 FCFA pour une vente à 150,000 FCFA.</p>
+                    <div className="text-white/95 font-extrabold text-3xl">30,000 FCFA</div>
+                    <div className="text-white/80 text-sm mt-2">Paiements mensuels, pas de surprises.</div>
+                </motion.div>
 
-            {/* Ambassador Levels */}
-            <motion.div
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl p-10 text-white">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg">
-                    <TrophyIcon className="h-10 w-10" />
-                  </div>
-                  <h3 className="text-3xl font-bold">Programme Ambassadeurs</h3>
-                </div>
-                
-                <p className="text-blue-100 mb-8 text-lg">
-                  Plus vous performez, plus vos avantages augmentent. Atteignez les paliers et débloquez des récompenses exclusives.
-                </p>
-                
-                <div className="space-y-6">
-                  {ambassadorLevels.map((level, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                      <div className="flex items-center gap-4">
-                        <div className={`p-3 rounded-xl bg-gradient-to-br ${level.color}`}>
-                          <span className="font-bold text-white">{level.level.charAt(0)}</span>
+                <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="col-span-1 bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white/30 shadow-lg"
+                >
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4">Récompenses Ambassadeurs</h2>
+                    <p className="text-slate-600 mb-6">Atteignez des paliers et bénéficiez d&apos;avantages exclusifs : hébergement, application, formations et matériel.</p>
+                    <div className="grid gap-3">
+                        <div className="flex items-center justify-between text-slate-700">
+                            <span className="font-medium">5 clients</span>
+                            <span className="text-blue-900 font-semibold">Site & hébergement</span>
                         </div>
-                        <div>
-                          <h4 className="font-bold text-lg">{level.level}</h4>
-                          <p className="text-blue-200 text-sm">{level.clients}</p>
+                        <div className="flex items-center justify-between text-slate-700">
+                            <span className="font-medium">10 clients</span>
+                            <span className="text-blue-900 font-semibold">App mobile</span>
                         </div>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-bold">{level.reward}</p>
-                        <p className="text-emerald-300 font-bold">Commission: {level.commission}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Success Stories */}
-              <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Témoignages Partenaires</h3>
-                <div className="space-y-6">
-                  {successStories.map((story, index) => (
-                    <div key={index} className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-cyan-50">
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg">
-                        {story.avatar}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="font-bold text-gray-900">{story.name}</h4>
-                            <p className="text-sm text-gray-600">{story.testimonial}</p>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-xl font-bold text-emerald-700">{story.revenue}</div>
-                            <div className="text-sm text-gray-500">{story.period}</div>
-                          </div>
+                        <div className="flex items-center justify-between text-slate-700">
+                            <span className="font-medium">15 clients</span>
+                            <span className="text-blue-900 font-semibold">Formation pro</span>
                         </div>
-                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
+                </motion.div>
+            </div>
         </div>
+        
       </section>
 
       {/* How It Works */}
@@ -504,7 +385,7 @@ export default function DevenirPartenaire() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Comment Ça Marche ?
               </span>
             </h2>
@@ -554,10 +435,10 @@ export default function DevenirPartenaire() {
               >
                 <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100">
                   <div className="flex items-center justify-between mb-6">
-                    <div className={`text-4xl font-bold bg-gradient-to-br ${step.color} bg-clip-text text-transparent`}>
+                    <div className={`text-4xl font-bold bg-sky-950 bg-clip-text text-transparent`}>
                       {step.step}
                     </div>
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${step.color}`}>
+                    <div className={`p-3 rounded-xl bg-sky-950`}>
                       <step.icon className="h-8 w-8 text-white" />
                     </div>
                   </div>
@@ -571,11 +452,11 @@ export default function DevenirPartenaire() {
                   </p>
                   
                   {/* Connecting Line */}
-                  {index < 3 && (
+                  {/* {index < 3 && (
                     <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 hidden lg:block">
                       <ArrowRightIcon className="h-8 w-8 text-gray-300" />
                     </div>
-                  )}
+                  )} */}
                 </div>
               </motion.div>
             ))}
@@ -584,8 +465,8 @@ export default function DevenirPartenaire() {
       </section>
 
       {/* CTA Section */}
-      <section id="inscription" className="py-32 px-6 md:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-blue-900 to-cyan-900" />
+      <section id="inscription" className="py-32 px-6 md:px-12 relative overflow-hidden bg-sky-950">
+        <div className="absolute inset-0" />
         <div className="absolute inset-0 bg-[url('/grid-white.svg')] opacity-10" />
         
         <motion.div 
@@ -597,7 +478,7 @@ export default function DevenirPartenaire() {
             rotate: { repeat: Infinity, duration: 20, ease: "linear" },
             scale: { repeat: Infinity, duration: 3, ease: "easeInOut" }
           }}
-          className="absolute top-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 -right-32 w-96 h-96 rounded-full blur-3xl"
         />
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">

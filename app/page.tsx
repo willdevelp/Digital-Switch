@@ -10,7 +10,7 @@ import {
   DevicePhoneMobileIcon,
   PaintBrushIcon,
   DocumentTextIcon,
-  WrenchScrewdriverIcon,
+ MegaphoneIcon,
   ArrowRightIcon,
   UsersIcon,
   ChatBubbleBottomCenterTextIcon,
@@ -20,67 +20,76 @@ import {
   ChevronDownIcon,
   CalendarIcon,
   TrophyIcon,
+  ChartBarIcon
 } from '@heroicons/react/24/outline';
 import { StarIcon as SolidStarIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
-const servicesOverview = [
+const services = [
   {
-    title: "Site vitrine",
-    icon: GlobeAltIcon,
-    description: "Présentez votre entreprise avec un site élégant et responsive.",
-    stats: "50+ projets",
-    color: "from-blue-500 to-cyan-500",
-    delay: 0.1,
-  },
-  {
-    title: "Site professionnel",
+    id: "pro",
+    title: "Creation de Sites Web",
     icon: CodeBracketIcon,
-    description: "Solutions avancées avec backend et référencement.",
-    stats: "SEO optimisé",
-    color: "from-purple-500 to-pink-500",
-    delay: 0.2,
+    color: "",
+    description: "Boostez votre entreprise à travers un Site Vitrine dynamiques, Site E-Commerce robuste, une application Web adaptés à tout type d'écran, sécurisé et optimisé. Avec des interfaces intuitives, une structure SEO-friendly et des fonctionnalités sur mesure pour garantir fiabilité, rapidité et évolutivité. ",
+    features: [
+      "Site Vitrine(site pour la présentation d'une entreprise)",
+      "Site E-Commerce",
+      "Application Web",
+      "Application Mobile",
+    ],
+    popular: false,
+    delivery: "15-20 jours",
+    support: "6 mois inclus",
   },
   {
-    title: "Site e-commerce",
-    icon: ShoppingCartIcon,
-    description: "Vendez en ligne avec paiements sécurisés.",
-    stats: "100+ boutiques",
-    color: "from-emerald-500 to-green-500",
-    delay: 0.3,
-  },
-  {
-    title: "Applications mobiles",
-    icon: DevicePhoneMobileIcon,
-    description: "Apps natives pour Android et iOS.",
-    stats: "30+ apps",
-    color: "from-orange-500 to-red-500",
-    delay: 0.4,
-  },
-  {
-    title: "Design graphique",
+    id: "design",
+    title: "Conception graphique",
     icon: PaintBrushIcon,
-    description: "Logos et chartes graphiques professionnelles.",
-    stats: "Design premium",
-    color: "from-violet-500 to-purple-500",
-    delay: 0.5,
+    color: "",
+    description: "Obtenez une identité visuelle forte avec nos services de conception graphique. Nous créons des logos uniques, des chartes graphiques cohérentes et des supports marketing percutants qui reflètent l'essence de votre marque et captivent votre audience.",
+    features: [
+      "Logo professionnel",
+      "Flyers et brochures",
+      "Cartes de visites",
+      "Bannières pour réseaux sociaux",
+    ],
+    popular: false,
+    delivery: "5-7 jours",
+    support: "1 mois inclus",
   },
   {
+    id: "marketing",
     title: "Marketing digital",
-    icon: DocumentTextIcon,
-    description: "Supports marketing attractifs et efficaces.",
-    stats: "Conversion +200%",
-    color: "from-amber-500 to-yellow-500",
-    delay: 0.6,
+    icon: MegaphoneIcon,
+    color: "",
+    description: "Augmentez votre visibilité en ligne et attirez plus de clients avec nos services de marketing digital. Nous élaborons des stratégies personnalisées incluant SEO, campagnes publicitaires, gestion des réseaux sociaux et email marketing pour maximiser votre retour sur investissement.",
+    features: [
+      "Stratégie digitale complète",
+      "Campagnes publicitaires ciblées",
+      "Gestion des réseaux sociaux",
+      "Analyse et reporting",
+    ],
+    popular: true,
+    delivery: "10-15 jours",
+    support: "3 mois inclus",
   },
-  {
-    title: "Maintenance",
-    icon: WrenchScrewdriverIcon,
-    description: "Support continu pour vos projets digitaux.",
-    stats: "Support 24/7",
-    color: "from-slate-600 to-gray-500",
-    delay: 0.7,
-  },
+  // {
+  //   id: "conception",
+  //   title: "Conception de Logiciel de Gestion",
+  //   icon: ChartBarIcon,
+  //   color: "",
+  //   description:"Concevez des logiciels de gestion sur mesure pour optimiser vos processus internes. Nous développons des solutions personnalisées qui automatisent vos tâches récurrentes, centralisent vos données et améliorent la productivité de votre équipe.",
+  //   features: [
+  //     "Logiciel de gestion sur mesure",
+  //     "Automatisation des processus",
+  //     "Centralisation des données",
+  //     "Interface intuitive",
+  //   ],
+  //   popular: false,
+  //   delivery: "7-14 jours",
+  //   support: "3 mois inclus",
+  // }
 ];
 
 const advantages = [
@@ -178,11 +187,11 @@ export default function Home() {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 py-20"
+        className="relative min-h-screen flex items-center justify-center bg-sky-950 overflow-hidden px-6 md:px-12 py-20"
       >
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" /> */}
         
         {/* Floating Elements */}
         <motion.div   
@@ -209,13 +218,13 @@ export default function Home() {
             </span>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
-                Digital Switch CM
+              <span className="bg-white bg-clip-text text-transparent">
+                Transformez votre vision digitale en réalité. 
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transformez votre vision digitale en réalité. 
+              
               <span className="block text-cyan-200 font-semibold mt-2">
                 Sites web, apps mobiles & design d&apos;exception.
               </span>
@@ -232,9 +241,9 @@ export default function Home() {
               href="/devenir-partenaire"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 overflow-hidden"
+              className="group relative px-10 py-5 bg-emerald-600 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+              <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
               <span className="relative flex items-center justify-center">
                 Devenir Partenaire
                 <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
@@ -289,7 +298,7 @@ export default function Home() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Nos Services
               </span>
             </h2>
@@ -302,9 +311,9 @@ export default function Home() {
             variants={containerVariants}
             initial="hidden"
             animate={isServicesInView ? "visible" : "hidden"}
-            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
           >
-            {servicesOverview.map((service, index) => {
+            {services.map((service, index) => {
               // compute a safe gradient background from the Tailwind-like color string
               const gradientBackground = (() => {
                 try {
@@ -355,11 +364,11 @@ export default function Home() {
                     {service.description}
                   </p>
                   
-                  <div className="text-center">
+                  {/* <div className="text-center">
                     <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 font-semibold rounded-full text-sm">
                       {service.stats}
                     </span>
-                  </div>
+                  </div> */}
                   
                   <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRightIcon className="h-6 w-6 text-blue-600" />
