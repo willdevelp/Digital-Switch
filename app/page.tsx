@@ -117,14 +117,6 @@ const advantages = [
 
 const testimonials = [
   {
-    name: "Sarah K.",
-    quote: "Digital Switch CM a transformé notre présence en ligne ! Notre trafic a augmenté de 300% en 3 mois.",
-    role: "PDG, TechInnovate",
-    avatar: "SK",
-    rating: 5,
-    project: "Site e-commerce",
-  },
-  {
     name: "Marc T.",
     quote: "Service exceptionnel, équipe réactive et professionnelle. Notre application mobile est un succès.",
     role: "Directeur, FoodDelivery Pro",
@@ -352,7 +344,7 @@ export default function Home() {
                 />
                 
                 <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                  <div className={`flex justify-center mb-6 p-4 rounded-2xl bg-gradient-to-br ${service.color ?? ''} w-fit mx-auto`}>
+                  <div className={`flex justify-center mb-6 p-4 rounded-2xl bg-sky-950 w-fit mx-auto`}>
                     <service.icon className="h-10 w-10 text-white" />
                   </div>
                   
@@ -370,9 +362,9 @@ export default function Home() {
                     </span>
                   </div> */}
                   
-                  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRightIcon className="h-6 w-6 text-blue-600" />
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             );
@@ -387,7 +379,7 @@ export default function Home() {
           >
             <Link 
               href="/services" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-4 bg-sky-950 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               Découvrir tous nos services
               <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
@@ -407,7 +399,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-sky-950 bg-clip-text text-transparent">
                 Pourquoi Nous Choisir ?
               </span>
             </h2>
@@ -427,8 +419,8 @@ export default function Home() {
                 className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 group-hover:from-blue-200 group-hover:to-cyan-200 transition-all duration-300 mb-6">
-                    <advantage.icon className="h-12 w-12 text-blue-600" />
+                  <div className="p-4 rounded-2xl bg-sky-100 group-hover:from-blue-200 group-hover:to-cyan-200 transition-all duration-300 mb-6">
+                    <advantage.icon className="h-12 w-12 text-sky-950" />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -460,14 +452,14 @@ export default function Home() {
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-2xl" />
               
               <h2 className="text-5xl font-bold mb-8 relative">
-                <span className="bg-gradient-to-r from-blue-800 to-cyan-700 bg-clip-text text-transparent">
+                <span className="bg-sky-950 bg-clip-text text-transparent">
                   Votre Partenaire Digital
                 </span>
               </h2>
               
               <div className="space-y-6 text-gray-700 text-lg">
                 <p>
-                  Chez <span className="font-bold text-blue-700">Digital Switch CM</span>, nous croyons que chaque entreprise mérite une présence digitale exceptionnelle. 
+                  Chez <span className="font-bold text-sky-950">Digital Switch CM</span>, nous croyons que chaque entreprise mérite une présence digitale exceptionnelle. 
                   Notre mission est de transformer vos idées en solutions digitales performantes.
                 </p>
                 
@@ -479,7 +471,7 @@ export default function Home() {
 
               <div className="mt-12 space-y-6">
                 <div className="flex items-start gap-4">
-                  <TrophyIcon className="h-8 w-8 text-amber-500 flex-shrink-0 mt-1" />
+                  <TrophyIcon className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-gray-900 mb-1">Excellence garantie</h4>
                     <p className="text-gray-600">Chaque projet est mené avec rigueur et passion</p>
@@ -487,7 +479,7 @@ export default function Home() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <CalendarIcon className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />
+                  <CalendarIcon className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-gray-900 mb-1">Process transparent</h4>
                     <p className="text-gray-600">Suivez l&apos;avancement de votre projet en temps réel</p>
@@ -501,7 +493,7 @@ export default function Home() {
               >
                 <Link 
                   href="/a-propos" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="inline-flex items-center px-8 py-4 bg-emerald-600 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
                   Notre histoire
                   <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
@@ -536,7 +528,7 @@ export default function Home() {
                   className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-2xl"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500">
+                    <div className="p-3 rounded-xl bg-emerald-600">
                       <UsersIcon className="h-8 w-8 text-white" />
                     </div>
                     <div>
@@ -551,8 +543,79 @@ export default function Home() {
         </div>
       </section>
 
+            {/* CTA Section */}
+      <section className="py-16 px-6 md:px-12 relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900" />
+        
+        {/* Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('/grid.svg')]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/20" />
+        </div>
+        
+        {/* Floating elements */}
+        <motion.div 
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            rotate: { repeat: Infinity, duration: 20, ease: "linear" },
+            scale: { repeat: Infinity, duration: 3, ease: "easeInOut" }
+          }}
+          className="absolute top-1/4 -right-32 w-96 h-72 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
+        />
+
+        <div className="relative z-10 max-w-5xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+              Prêt à Révolutionner Votre Présence Digitale ?
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Contactez-nous dès aujourd&apos;hui pour une consultation gratuite 
+              et un devis personnalisé.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <span className="relative flex items-center justify-center">
+                  Discuter de mon projet
+                  <ArrowRightIcon className="ml-4 h-7 w-7 group-hover:translate-x-2 transition-transform" />
+                </span>
+              </motion.a>
+
+              <motion.a
+                href="/portfolio"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-12 py-6 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold text-xl rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300"
+              >
+                Voir nos réalisations
+              </motion.a>
+            </div>
+
+            <p className="mt-8 text-blue-200">
+              Réponse garantie sous 24 heures
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <section ref={testimonialsRef} className="py-32 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-black">
+      <section ref={testimonialsRef} className="py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -30 }}
@@ -560,10 +623,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl font-bold mb-6 text-white">
+            <h2 className="text-5xl font-bold mb-6 text-sky-950">
               Ils Nous Ont Fait Confiance
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
               Découvrez ce que nos clients disent de leur expérience avec Digital Switch CM
             </p>
           </motion.div>
@@ -572,14 +635,14 @@ export default function Home() {
             variants={containerVariants}
             initial="hidden"
             animate={isTestimonialsInView ? "visible" : "hidden"}
-            className="grid lg:grid-cols-3 gap-8"
+            className="grid lg:grid-cols-2 gap-8"
           >
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -10 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700/50 hover:border-cyan-500/30 transition-all duration-300 group"
+                className="bg-sky-950 rounded-3xl p-8 shadow-2xl border border-gray-700/50 hover:border-cyan-500/30 transition-all duration-300 group"
               >
                 {/* Rating */}
                 <div className="flex mb-6">
@@ -617,7 +680,7 @@ export default function Home() {
           </motion.div>
 
           {/* Stats */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isTestimonialsInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -636,78 +699,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-32 px-6 md:px-12 relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900" />
-        
-        {/* Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/grid.svg')]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/20" />
-        </div>
-        
-        {/* Floating elements */}
-        <motion.div 
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ 
-            rotate: { repeat: Infinity, duration: 20, ease: "linear" },
-            scale: { repeat: Infinity, duration: 3, ease: "easeInOut" }
-          }}
-          className="absolute top-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
-        />
-
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white">
-              Prêt à Révolutionner Votre Présence Digitale ?
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Contactez-nous dès aujourd&apos;hui pour une consultation gratuite 
-              et un devis personnalisé.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.a
-                href="/contact"
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.98 }}
-                className="group relative px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                <span className="relative flex items-center justify-center">
-                  Discuter de mon projet
-                  <ArrowRightIcon className="ml-4 h-7 w-7 group-hover:translate-x-2 transition-transform" />
-                </span>
-              </motion.a>
-
-              <motion.a
-                href="/portfolio"
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-12 py-6 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold text-xl rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300"
-              >
-                Voir nos réalisations
-              </motion.a>
-            </div>
-
-            <p className="mt-8 text-blue-200">
-              Réponse garantie sous 24 heures
-            </p>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
     </div>
