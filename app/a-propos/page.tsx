@@ -142,7 +142,7 @@ export default function APropos() {
       {/* Hero Section */}
       <section 
         ref={heroRef} 
-        className="relative h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 bg-sky-950"
+        className="relative py-16 flex items-center justify-center overflow-hidden px-6 md:px-12 bg-sky-950"
       >
         {/* Background with Parallax */}
         {/* <motion.div 
@@ -182,7 +182,7 @@ export default function APropos() {
             initial={{ opacity: 0, y: -60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, type: 'spring' }}
-            className="mb-8"
+            className=""
           >
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8">
               <SparklesIcon className="h-4 w-4 mr-2" />
@@ -204,13 +204,13 @@ export default function APropos() {
           </motion.div>
 
           {/* Scroll Indicator */}
-          <motion.div
+          {/* <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
             className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
           >
             <ChevronDownIcon className="h-8 w-8 text-white/60" />
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 

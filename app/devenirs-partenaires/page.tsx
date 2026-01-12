@@ -326,9 +326,9 @@ export default function DevenirPartenaire() {
                     <h2 className="text-2xl font-bold text-slate-900 mb-4">Programme de Code Promo</h2>
                     <p className="text-slate-600 mb-6">Recevez un code unique et suivez en temps réel les ventes générées. Tableaux de bord clairs, export facile et rapports par période.</p>
                     <ul className="text-slate-700 space-y-3">
-                        <li className="flex items-start gap-3"><span className="text-blue-900 mt-1">•</span> Suivi des conversions</li>
-                        <li className="flex items-start gap-3"><span className="text-blue-900 mt-1">•</span> Paiements transparents</li>
-                        <li className="flex items-start gap-3"><span className="text-blue-900 mt-1">•</span> Support prioritaire</li>
+                        <li className="flex items-start gap-3"><span className="text-sky-950 mt-1">•</span> Suivi des conversions</li>
+                        <li className="flex items-start gap-3"><span className="text-sky-950 mt-1">•</span> Paiements transparents</li>
+                        <li className="flex items-start gap-3"><span className="text-sky-950 mt-1">•</span> Support prioritaire</li>
                     </ul>
                 </motion.div>
 
@@ -336,7 +336,7 @@ export default function DevenirPartenaire() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1 }}
-                    className="col-span-1 bg-blue-900 text-white rounded-3xl p-8 shadow-2xl"
+                    className="col-span-1 bg-sky-950 text-white rounded-3xl p-8 shadow-2xl"
                 >
                     <h2 className="text-2xl font-bold mb-4">Commissions</h2>
                     <p className="text-white/90 mb-6">20% sur chaque vente réalisée via votre code. Exemple : 30,000 FCFA pour une vente à 150,000 FCFA.</p>
@@ -355,15 +355,15 @@ export default function DevenirPartenaire() {
                     <div className="grid gap-3">
                         <div className="flex items-center justify-between text-slate-700">
                             <span className="font-medium">5 clients</span>
-                            <span className="text-blue-900 font-semibold">Site & hébergement</span>
+                            <span className="text-sky-950 font-semibold">Site & hébergement</span>
                         </div>
                         <div className="flex items-center justify-between text-slate-700">
                             <span className="font-medium">10 clients</span>
-                            <span className="text-blue-900 font-semibold">App mobile</span>
+                            <span className="text-sky-950 font-semibold">App mobile</span>
                         </div>
                         <div className="flex items-center justify-between text-slate-700">
                             <span className="font-medium">15 clients</span>
-                            <span className="text-blue-900 font-semibold">Formation pro</span>
+                            <span className="text-sky-950 font-semibold">Formation pro</span>
                         </div>
                     </div>
                 </motion.div>
@@ -516,9 +516,9 @@ export default function DevenirPartenaire() {
                 href="/inscription-partenaire"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-12 py-6 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all duration-300 overflow-hidden"
+                className="group relative px-12 py-6 bg-emerald-600 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all duration-300 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-emerald-600 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                 <span className="relative flex items-center justify-center gap-3">
                   S&apos;inscrire maintenant
                   <ArrowRightIcon className="ml-4 h-7 w-7 group-hover:translate-x-2 transition-transform" />

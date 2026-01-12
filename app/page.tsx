@@ -10,7 +10,7 @@ import {
   DevicePhoneMobileIcon,
   PaintBrushIcon,
   DocumentTextIcon,
- MegaphoneIcon,
+  MegaphoneIcon,
   ArrowRightIcon,
   UsersIcon,
   ChatBubbleBottomCenterTextIcon,
@@ -154,12 +154,12 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-    visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
       duration: 0.6
-    } 
+    }
   },
 };
 
@@ -168,7 +168,7 @@ export default function Home() {
   const servicesRef = useRef(null);
   const aboutRef = useRef(null);
   const testimonialsRef = useRef(null);
-  
+
   const isHeroInView = useInView(heroRef, { once: true });
   const isServicesInView = useInView(servicesRef, { once: true, margin: "-100px" });
   const isAboutInView = useInView(aboutRef, { once: true });
@@ -177,21 +177,21 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-b from-white via-blue-50/30 to-indigo-50/50">
       {/* Hero Section */}
-      <section 
-        ref={heroRef} 
+      <section
+        ref={heroRef}
         className="relative min-h-screen flex items-center justify-center bg-sky-950 overflow-hidden px-6 md:px-12 py-20"
       >
         {/* Background Effects */}
         {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" /> */}
-        
+
         {/* Floating Elements */}
-        <motion.div   
+        <motion.div
           animate={{ y: [0, -20, 0] }}
           transition={{ repeat: Infinity, duration: 3 }}
           className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
         />
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 20, 0] }}
           transition={{ repeat: Infinity, duration: 4, delay: 0.5 }}
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
@@ -208,15 +208,15 @@ export default function Home() {
               <SparklesIcon className="h-4 w-4 mr-2" />
               Agence digitale leader au Cameroun
             </span>
-            
+
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
               <span className="bg-white bg-clip-text text-transparent">
-                Transformez votre vision digitale en réalité. 
+                Transformez votre vision digitale en réalité.
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-              
+
               <span className="block text-cyan-200 font-semibold mt-2">
                 Sites web, apps mobiles & design d&apos;exception.
               </span>
@@ -241,7 +241,7 @@ export default function Home() {
                 <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </span>
             </motion.a>
-            
+
             <motion.a
               href="/portfolio"
               whileHover={{ scale: 1.05, y: -5 }}
@@ -281,7 +281,7 @@ export default function Home() {
       {/* Services Overview */}
       <section ref={servicesRef} className="py-32 px-6 md:px-12 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-white to-blue-50/50" />
-        
+
         <div className="relative max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -30 }}
@@ -328,46 +328,46 @@ export default function Home() {
               })();
 
               return (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                custom={index}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -10,
-                  transition: { type: "spring", stiffness: 300 }
-                }}
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl blur-xl"
-                  style={{ background: gradientBackground }}
-                />
-                
-                <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                  <div className={`flex justify-center mb-6 p-4 rounded-2xl bg-sky-950 w-fit mx-auto`}>
-                    <service.icon className="h-10 w-10 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 text-center mb-6">
-                    {service.description}
-                  </p>
-                  
-                  {/* <div className="text-center">
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  custom={index}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -10,
+                    transition: { type: "spring", stiffness: 300 }
+                  }}
+                  className="group relative"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl blur-xl"
+                    style={{ background: gradientBackground }}
+                  />
+
+                  <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div className={`flex justify-center mb-6 p-4 rounded-2xl bg-sky-950 w-fit mx-auto`}>
+                      <service.icon className="h-10 w-10 text-white" />
+                    </div>
+
+                    <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-gray-600 text-center mb-6">
+                      {service.description}
+                    </p>
+
+                    {/* <div className="text-center">
                     <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 font-semibold rounded-full text-sm">
                       {service.stats}
                     </span>
                   </div> */}
-                  
-                  {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+                    {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRightIcon className="h-6 w-6 text-blue-600" />
                   </div> */}
-                </div>
-              </motion.div>
-            );
+                  </div>
+                </motion.div>
+              );
             })}
           </motion.div>
 
@@ -377,8 +377,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-center mt-16"
           >
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="inline-flex items-center px-8 py-4 bg-sky-950 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               Découvrir tous nos services
@@ -422,11 +422,11 @@ export default function Home() {
                   <div className="p-4 rounded-2xl bg-sky-100 group-hover:from-blue-200 group-hover:to-cyan-200 transition-all duration-300 mb-6">
                     <advantage.icon className="h-12 w-12 text-sky-950" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {advantage.title}
                   </h3>
-                  
+
                   <p className="text-gray-600">
                     {advantage.description}
                   </p>
@@ -440,7 +440,7 @@ export default function Home() {
       {/* About Section */}
       <section ref={aboutRef} className="py-32 px-6 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50" />
-        
+
         <div className="relative max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -450,21 +450,21 @@ export default function Home() {
               className="relative"
             >
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-2xl" />
-              
+
               <h2 className="text-5xl font-bold mb-8 relative">
                 <span className="bg-sky-950 bg-clip-text text-transparent">
                   Votre Partenaire Digital
                 </span>
               </h2>
-              
+
               <div className="space-y-6 text-gray-700 text-lg">
                 <p>
-                  Chez <span className="font-bold text-sky-950">Digital Switch CM</span>, nous croyons que chaque entreprise mérite une présence digitale exceptionnelle. 
+                  Chez <span className="font-bold text-sky-950">Digital Switch CM</span>, nous croyons que chaque entreprise mérite une présence digitale exceptionnelle.
                   Notre mission est de transformer vos idées en solutions digitales performantes.
                 </p>
-                
+
                 <p>
-                  Basée au Cameroun, notre agence combine expertise technique, créativité et compréhension des marchés 
+                  Basée au Cameroun, notre agence combine expertise technique, créativité et compréhension des marchés
                   africains pour vous offrir des solutions adaptées à vos besoins spécifiques.
                 </p>
               </div>
@@ -477,7 +477,7 @@ export default function Home() {
                     <p className="text-gray-600">Chaque projet est mené avec rigueur et passion</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <CalendarIcon className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
                   <div>
@@ -491,8 +491,8 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 className="mt-12"
               >
-                <Link 
-                  href="/a-propos" 
+                <Link
+                  href="/a-propos"
                   className="inline-flex items-center px-8 py-4 bg-emerald-600 text-white font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
                   Notre histoire
@@ -516,16 +516,16 @@ export default function Home() {
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                
+
                 {/* Overlay effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-                
+
                 {/* Floating card */}
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   animate={isAboutInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.8 }}
-                  className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-2xl"
+                  className="absolute bottom-8 left-8 right-8 bg-sky-950 backdrop-blur-sm rounded-2xl p-6 shadow-2xl"
                 >
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-xl bg-emerald-600">
@@ -543,19 +543,19 @@ export default function Home() {
         </div>
       </section>
 
-            {/* CTA Section */}
-      <section className="py-16 px-6 md:px-12 relative overflow-hidden">
+      {/* CTA Section */}
+      <section className="py-16 px-6 md:px-12 relative overflow-hidden bg-sky-950">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900" />
-        
+        <div className="absolute inset-0 bg-sky-950" />
+
         {/* Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/grid.svg')]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/20" />
+          <div className="absolute inset-0 bg-sky-950" />
         </div>
-        
+
         {/* Floating elements */}
-        <motion.div 
+        {/* <motion.div 
           animate={{ 
             rotate: 360,
             scale: [1, 1.1, 1]
@@ -564,10 +564,10 @@ export default function Home() {
             rotate: { repeat: Infinity, duration: 20, ease: "linear" },
             scale: { repeat: Infinity, duration: 3, ease: "easeInOut" }
           }}
-          className="absolute top-1/4 -right-32 w-96 h-72 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
-        />
+          className="absolute top-1/4 -right-32 w-96 h-72 bg-sky-950 rounded-full blur-3xl"
+        /> */}
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <div className="relative z-10 max-w-5xl mx-auto text-center bg-sky-950">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -577,9 +577,9 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
               Prêt à Révolutionner Votre Présence Digitale ?
             </h2>
-            
+
             <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Contactez-nous dès aujourd&apos;hui pour une consultation gratuite 
+              Contactez-nous dès aujourd&apos;hui pour une consultation gratuite
               et un devis personnalisé.
             </p>
 
@@ -588,9 +588,9 @@ export default function Home() {
                 href="/contact"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
+                className="group relative px-12 py-6 bg-emerald-600 text-white font-bold text-xl rounded-3xl shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-emerald-600 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                 <span className="relative flex items-center justify-center">
                   Discuter de mon projet
                   <ArrowRightIcon className="ml-4 h-7 w-7 group-hover:translate-x-2 transition-transform" />
@@ -647,9 +647,9 @@ export default function Home() {
                 {/* Rating */}
                 <div className="flex mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <SolidStarIcon 
-                      key={i} 
-                      className="h-6 w-6 text-yellow-500 fill-yellow-500" 
+                    <SolidStarIcon
+                      key={i}
+                      className="h-6 w-6 text-yellow-500 fill-yellow-500"
                     />
                   ))}
                 </div>
@@ -664,7 +664,7 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl">
                     {testimonial.avatar}
                   </div>
-                  
+
                   <div>
                     <p className="font-bold text-white text-lg">{testimonial.name}</p>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
